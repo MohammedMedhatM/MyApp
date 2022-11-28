@@ -24,7 +24,7 @@ app.use("/request", requestRoutes);
 app.use("/message", messageRoutes);
 
 const CONNECTION_URL =
-  "mongodb+srv://Medo:mohd2010@cluster0.jogd5om.mongodb.net/?retryWrites=true&w=majority";
+  process.env.DB_URL;
 const PORT = process.env.PORT || 5000;
 
 const httpServer = createServer(app);
